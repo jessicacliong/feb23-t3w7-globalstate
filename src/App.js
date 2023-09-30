@@ -1,20 +1,33 @@
 import './App.css';
 import ApiTester from './ApiTester';
-import ConnectionContext, { defaultConnectionData } from './context/ConnectionContext';
+import UserGlobalData from './context/UserContext';
+import UserDisplay from './UserDisplay';
+import ConnectionProvider from './context/ConnectionContext';
+
 
 function App() {
 
   return (
     <div className="App">
 
-{/* Returning the context data from  utilising a provider */}
-    <ConnectionContext.Provider value={defaultConnectionData}>
-{/* Context is nested as a child component within the provider */}
-      <ApiTester/>
+      <UserGlobalData>
+        <ConnectionProvider>
+          <ApiTester />
+          <UserDisplay />
+        </ConnectionProvider>
+      </UserGlobalData>
 
-    </ConnectionContext.Provider>
-
-
+     {/* long way to write the above block of components */}
+      {/* 
+      <UserGlobalData>
+        // Returning the context data from  utilising a provider
+        <ConnectionContext.Provider value={defaultConnectionData}>
+        // Context is nested as a child component within the provider
+          <ApiTester />
+          <UserDisplay />
+        </ConnectionContext.Provider>
+      </UserGlobalData>
+      */}
 
     </div>
   );
