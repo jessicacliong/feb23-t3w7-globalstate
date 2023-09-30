@@ -14,8 +14,10 @@ function App() {
         <ConnectionProvider>
           <ApiTester />
           <UserDisplay />
+
         </ConnectionProvider>
       </UserGlobalData>
+
 
      {/* long way to write the above block of components */}
       {/* 
