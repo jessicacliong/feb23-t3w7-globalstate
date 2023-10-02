@@ -13,7 +13,9 @@ export default function ConnectionProvider(props){
 
 	return(
 		<ConnectionContext.Provider value={defaultConnectionData}>
+			
 			{props.children}
+			
 		</ConnectionContext.Provider>
 	)
 }

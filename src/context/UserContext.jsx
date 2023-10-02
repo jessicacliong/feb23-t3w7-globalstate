@@ -21,6 +21,7 @@ export default function UserGlobalData(props){
 		<UserContext.Provider value={			
       {
         userData: userData, 
+	   
         // setUserData: setUserData
         userDataDispatch: userDataDispatch
       }

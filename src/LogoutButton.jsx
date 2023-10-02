@@ -8,9 +8,11 @@ export default function LogoutButton(){
 
 	return (
 		<button onClick={() => {
+
 			userDataDispatch({type:'logout'})
 		}}>
 			Log out
+			
 		</button>
 	)
 

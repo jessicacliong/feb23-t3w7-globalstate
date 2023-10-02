@@ -31,6 +31,5 @@ export const userReducer = (previousState, instructions) => {
 		default:
 			return newState;
 	}
-  
 	return newState;
 }
